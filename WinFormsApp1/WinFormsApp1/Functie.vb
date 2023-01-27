@@ -47,8 +47,12 @@
     End Sub
 
     Private Sub oefening1()
-
+        MsgBox(random(5, 6))
     End Sub
+
+    Private Function random(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Return num1 + num2
+    End Function
 
     Private Sub oefening2()
 

@@ -47,6 +47,11 @@
     End Sub
 
     Private Sub oefening1()
+        Dim array() As Integer
+        array = {12, 16, 15, 14, 18}
+
+        MsgBox(array.Length)
+
 
     End Sub
 

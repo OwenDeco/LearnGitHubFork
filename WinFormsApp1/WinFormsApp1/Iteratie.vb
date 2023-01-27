@@ -96,9 +96,9 @@
 
     Private Sub oefening3()
 
-        Dim wis = -1
-        Dim boek = -1
-        Dim inf = -1
+        Dim wis = InputBox("geen een waarde in voor wiskunde")
+        Dim boek = InputBox("geef een waarde in voor boekhouden")
+        Dim inf = InputBox("geen een waarde in voor informatica")
 
         Do While wis < 0 Or wis > 20
             wis = InputBox("geef nieuwe waarde voor wiskunde")
@@ -114,16 +114,53 @@
             MsgBox(inf)
         Loop
 
-
+        'Voor geslaagd, niet geslaagd zie selectie oef
 
     End Sub
 
     Private Sub oefening4()
+        Dim nummer As Integer = InputBox("raad het nummer")
+        Dim random = CInt(Int((6 * Rnd()) + 1))
+        Dim count As Integer = 0
+
+        While nummer <> random
+
+            If nummer < random Then
+                MsgBox("hoger")
+            ElseIf nummer > random Then
+                MsgBox("lager")
+
+
+            End If
+            count += 1
+
+            nummer = InputBox("ander nummer gokken")
+        End While
+
+        MsgBox("found it, took you" & count & " turns")
 
     End Sub
 
     Private Sub oefening5()
+        Dim i As Integer = 0
+        Dim numberH As Integer = 0
+        Dim numberL As Integer = 0
+        While i < 10
+            Dim numberTemp = InputBox("geef nummer mee")
+            If i = 0 Then
+                numberH = numberTemp
+                numberL = numberTemp
+            ElseIf numberTemp > numberH Then
+                numberH = numberTemp
+            ElseIf numberTemp < numberL Then
+                numberL = numberTemp
 
+            End If
+
+            i += 1
+        End While
+
+        MsgBox("high number: " & numberH & " Low number: " & numberL)
     End Sub
 
     Private Sub oefening6()
